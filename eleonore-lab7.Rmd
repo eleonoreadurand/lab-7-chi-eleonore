@@ -37,7 +37,11 @@ Eleonore: data wrangling and counts
 
 get_guns<- gc_df %>% 
   filter(gender != "NA", make_get_guns != "NA") %>% #filter out the NA values 
-  count(gender, make_get_guns) #for each level of the gender column, counts responses
+  count(gender, make_get_guns) %>% #for each level of the gender column, counts responses
+  spread(make_get_guns, n) %>% 
+  select(-gender) #using '-' tells it to remove the column
+
+rownames(get_guns)<- c ("Female", "Male")
 
 
 ```
