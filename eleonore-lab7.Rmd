@@ -70,10 +70,12 @@ guns_x2
 # H0: there is no difference in proportion of M:F respondents in what they think about gun access
 # HA: there is a sign diff in proportion of M:F respondents in what they think about gun access
 
-"Recommended government action on gun access differed significantly between male (n= ) and female (n= ) respondents ($\chi^2$(`r guns_x2$parameter`) = ...., p < 0.001. Notable, a much higher proportion of female respondents (57.4%)  recommend making it more difficult to get guns, compared to 40.4% for male respondents.
 
-Could follow up with pairwise.
-
-# guns_x2$stdres counts are different enough to derive sig result
 ```
 
+
+#"Recommended government action on gun access differed significantly between male (n= ) and female (n= ) respondents ($\chi^2$(`r guns_x2$parameter`) = ...., p < 0.001. Notable, a much higher proportion of female respondents (57.4%)  recommend making it more difficult to get guns, compared to 40.4% for male respondents.
+
+#Could follow up with pairwise.
+
+# guns_x2$stdres counts are different enough to derive sig result
