@@ -38,11 +38,42 @@ Eleonore: data wrangling and counts
 get_guns<- gc_df %>% 
   filter(gender != "NA", make_get_guns != "NA") %>% #filter out the NA values 
   count(gender, make_get_guns) %>% #for each level of the gender column, counts responses
-  spread(make_get_guns, n) %>% 
+  spread(make_get_guns, n) %>%  # by 'n'
   select(-gender) #using '-' tells it to remove the column
 
 rownames(get_guns)<- c ("Female", "Male")
 
 
+```
+
+My name is Sam the collaborator and I'm going to be doing chi-square test for independence!
+
+We ask: "Is there a significant association between sex and opinion on whether guns should be more difficult, easier, or the same difficulty to get?"
+
+```{r}
+
+#Chi-sqaure compares proportions of counts. What are the actual proportions? How do each differ?
+
+#First, look at the actual proportions.
+
+guns_prop <- prop.table(as.matrix(get_guns), 1) #updating class of make_guns so it works with prop.table function. # ,1) tells it to use the entire row (i.e. female) to find proportion in row?
+
+guns_prop
+
+#Proportions are something you would want to report!
+
+# Runn chi-square test for indepence. See above test question outside of the code. Make sure you made a table that is in the correct form before--then the test is simple!
+
+guns_x2 <- chisq.test(get_guns)
+guns_x2
+
+# H0: there is no difference in proportion of M:F respondents in what they think about gun access
+# HA: there is a sign diff in proportion of M:F respondents in what they think about gun access
+
+"Recommended government action on gun access differed significantly between male (n= ) and female (n= ) respondents ($\chi^2$(`r guns_x2$parameter`) = ...., p < 0.001. Notable, a much higher proportion of female respondents (57.4%)  recommend making it more difficult to get guns, compared to 40.4% for male respondents.
+
+Could follow up with pairwise.
+
+# guns_x2$stdres counts are different enough to derive sig result
 ```
 
