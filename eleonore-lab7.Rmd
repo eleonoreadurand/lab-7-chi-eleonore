@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-This: I'm Eleonore and I'm updating this markdown file here. 
+This: I'm Eleonore and I'm updating this markdown file here.  
 
 ```{r}
 
