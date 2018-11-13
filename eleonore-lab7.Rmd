@@ -1,0 +1,13 @@
+---
+title: "Gun Control Chi-Square"
+author: "Eleonore Durand"
+date: "November 13, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This: I'm Eleonore and I'm updating this markdown file here. 
+
