@@ -24,7 +24,7 @@ We are asking: Is there a significant difference in recommended gun control acti
 
 
 ```{r}
-# Is it Thanksgiving yet?
+# Is it Thanksgiving yet? (Sam)
 
 library(kableExtra)
 ```
