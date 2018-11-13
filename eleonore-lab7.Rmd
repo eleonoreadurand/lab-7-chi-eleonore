@@ -29,3 +29,16 @@ We are asking: Is there a significant difference in recommended gun control acti
 library(kableExtra)
 ```
 
+
+Eleonore: data wrangling and counts 
+
+```{r}
+
+
+get_guns<- gc_df %>% 
+  filter(gender != "NA", make_get_guns != "NA") %>% #filter out the NA values 
+  count(gender, make_get_guns) #for each level of the gender column, counts responses
+
+
+```
+
